@@ -7,12 +7,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
     <!--    the background layout-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/primary"
         android:alpha="0.7"/>
+
     <!-- logo layout-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,94 +22,128 @@
         android:orientation="vertical"
         android:gravity="center"
         android:padding="28dp">
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/eazy_icon"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="EazyPay"
-        android:textStyle="bold"
-        android:fontFamily="sans-serif-medium"
-        android:textSize="32sp"
-        android:textColor="@color/white"/>
+
+        <ImageView
+            android:contentDescription="@string/logo_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/eazy_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="32sp"
+            android:textColor="@color/white"/>
     </LinearLayout>
-<androidx.cardview.widget.CardView
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:cardCornerRadius="28dp"
         android:layout_marginBottom="-20dp">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="28dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome"
+            android:text="@string/welcome"
             android:textColor="@color/primary"
             android:textSize="32sp"
             android:textStyle="bold"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="please login with your information"
+            android:text="@string/please_login_with_your_information"
             android:alpha="0.7"/>
+
         <View
             android:layout_width="wrap_content"
             android:layout_height="15dp"/>
+
         <TextView
+            android:id="@+id/emailInpL"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email Address"
+            android:text="@string/email_address"
             android:alpha="0.7"
             android:textStyle="bold"/>
+
         <EditText
+            android:labelFor="@id/emailInpL"
+            android:hint="@string/password"
+            android:autofillHints="password"
+            android:id="@+id/emailInp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
-            android:drawableEnd=""/>
+            android:drawableEnd="@drawable/done_icon"/>
+
         <View
             android:layout_width="wrap_content"
             android:layout_height="15dp"/>
+
         <TextView
+            android:id="@+id/passwordInpL"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Password"
+            android:text="@string/password"
             android:alpha="0.7"
             android:textStyle="bold"/>
+
         <EditText
+            android:labelFor="@id/passwordInpL"
+            android:hint="@string/password"
+            android:autofillHints="password"
+            android:id="@+id/passwordInp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:drawableEnd=""/>
+            android:drawableEnd="@drawable/password_icon"/>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Remember me"
-            android:layout_centerVertical="true"
-            android:alpha="0.7"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Forgot your Password?"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remember_me"
+                android:layout_centerVertical="true"
+                android:alpha="0.7"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forgot_your_password"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+
         </RelativeLayout>
+
+        <!-- empty space under the remember me checkbox and forgot password-->
         <View
             android:layout_width="wrap_content"
             android:layout_height="10dp"/>
+
+        <!-- Login Button-->
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginBtn"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Login"
+            android:text="@string/login"
             app:cornerRadius="32dp"/>
+
+        <!-- empty space under the login button-->
         <View
             android:layout_width="wrap_content"
             android:layout_height="10dp"/>
